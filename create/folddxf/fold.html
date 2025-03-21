@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Fold </title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/raicon.png" width="45" height="15" /></div>
+        <div><p>Right Angle Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../../index.html">Welcome to Right Angle</a></li>
+    <li><button class="tree blank"></button><a href="../../installation.html">Installing the Software</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../home/index.html">Home / Overview</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../home/gauging.html">Gauging </a></li>
+        <li><button class="tree blank"></button><a href="../../home/tools.html">Tools</a></li>
+        <li><button class="tree blank"></button><a href="../../home/homescreen.html">Home screen</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="../index.html">Create</a>
+      <ul>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../profile/index.html">From Profile</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../profile/fromprofile.html">Profileselection</a></li>
+            <li><button class="tree blank"></button><a href="../profile/createeditaprofile.html">Create / edit a Profile</a></li>
+            <li><button class="tree blank"></button><a href="../profile/extrude.html">Extrude</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree open"></button>
+          <a href="index.html">Fold Flat DXF </a>
+          <ul>
+            <li><button class="tree blank"></button><a href="main.html">Main screen</a></li>
+            <li><button class="tree blank"></button><a href="settings.html">create</a></li>
+            <li><button class="tree blank"></button><a href="edit.html">Edit</a></li>
+            <li><button class="tree blank"></button><a class="active" href="fold.html">Fold </a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../import/index.html">Import 3D model</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../import/main.html">Main screen</a></li>
+            <li><button class="tree blank"></button><a href="../import/unfold.html">Unfold</a></li>
+            <li><button class="tree blank"></button><a href="../import/dotooling.html">Do Tooling</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../direct/index.html">Direct Programming</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../direct/directprogram.html">Main screen</a></li>
+            <li><button class="tree blank"></button><a href="../direct/addremove.html">Add / Remove</a></li>
+            <li><button class="tree blank"></button><a href="../direct/settings.html">Settings</a></li>
+            <li><button class="tree blank"></button><a href="../direct/run.html">Run</a></li>
+            <li><button class="tree blank"></button><a href="../direct/moveupmovedownorprevbendnextbend.html">Navigate bend</a></li>
+            <li><button class="tree blank"></button><a href="../direct/corrections.html">Corrections</a></li>
+            <li><button class="tree blank"></button><a href="../direct/jog.html">Jog</a></li>
+            <li><button class="tree blank"></button><a href="../direct/tableprogramming.html">Table Programming</a></li>
+          </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../setting.html">Setting page</a></li>
+        <li><button class="tree blank"></button><a href="../createtool.html">Create Tool</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../edit/index.html">Edit</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../edit/sequence.html">Edit Sequence</a></li>
+        <li><button class="tree blank"></button><a href="../../edit/gauges.html">Back gauges</a></li>
+        <li><button class="tree blank"></button><a href="../../edit/tooling.html">Tooling</a></li>
+        <li><button class="tree blank"></button><a href="../../edit/simulation.html">Simulation</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../run/index.html">Run</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../run/mainscreen.html">Main screen</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../run/wf1/index.html">Model based WF</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../run/wf1/setupsheet.html">Setup Sheet</a></li>
+            <li><button class="tree blank"></button><a href="../../run/wf1/runprogram.html">Run Program</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../run/wf2/index.html">Program based WF</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../run/wf2/directprogram.html">Info screen</a></li>
+            <li><button class="tree blank"></button><a href="../../run/wf2/run.html">Run</a></li>
+          </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../run/corrections.html">Corrections</a></li>
+        <li><button class="tree blank"></button><a href="../../run/cycle.html">Edit Cycle</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../settings/index.html">Settings</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../settings/jogaxes.html">Jog Axes</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/manualprogram.html">Manual Program</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/toolinventory.html">Tool Inventory</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../settings/other settings/index.html">Other Settings</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../settings/other settings/machinesettings.html">Machine Settings</a></li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../settings/other settings/generalparameters/index.html">General Parameters</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/machine.html">Machine</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/tools.html">Tools</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/safety.html">Safety</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/canports.html">CAN ports</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/plcoptions.html">PLC Options</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/digitalinputconfig.html">Digital input configuration</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/maintenance.html">Maintenance</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/log.html">Log</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/diagnostics.html">Diagnostics</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/display.html">Display</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/digitalprotractor.html">Digital Protractor</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/barcode.html">Barcode</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../settings/other settings/yaxisparameters/index.html">Y-Axis Parameters</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/general.html">General</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/mute.html">Mute</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/feedback.html">Feedback</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/pressurevalve.html">Pressure Valve</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/pressuresensor.html">Pressure Sensor</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/idle.html">Idle</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/fastclosing.html">Fast Closing</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/fastclosingadv.html">Fast Closing Advanced</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/pressing.html">Pressing</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/pressureadvancedpos.html">Pressure Advanced</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/decompression.html">Decompression</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/opening.html">Opening</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/yaxiscold.html">Y-Axis Cold Condition Parameters</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/crowning.html">Crowning</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/electricpressbrake.html">Electric Press Brake</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../settings/other settings/axisparameters/index.html">Axis Parameters</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../settings/other settings/axisparameters/xaxis.html">X Axis</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/axisparameters/handwheel.html">Hand Wheel</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/axisparameters/fl1.html">FL1</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../settings/other settings/defaults/index.html">Defaults</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../settings/other settings/defaults/bendcycle.html">Bend Cycle</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/defaults/bendprogram.html">Bend program</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/defaults/importexport.html">Import/Export</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/defaults/others.html">Others</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../application/index.html">Application notes</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../application/toolselection.html">Selection of tools</a></li>
+        <li><button class="tree blank"></button><a href="../../application/airbending.html">Air bendig</a></li>
+        <li><button class="tree blank"></button><a href="../../application/radiusbending.html">Large radius bendig</a></li>
+        <li><button class="tree blank"></button><a href="../../application/hemming.html">Hemming</a></li>
+        <li><button class="tree blank"></button><a href="../../application/coining.html">Coining</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="../index.html">Create</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="index.html">Fold Flat DXF </a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="fold.html">Fold </a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Fold </h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When this option is selected, a File Selection panel appears using which the required DXF file to be folded can be picked. Once a file is selected, it is opened in the Fold DXF page:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/foldflat.png" alt="foldflat"></span></p>
+</div>
+<div class="paragraph">
+<p>It is possible to set a material, change the thickness or assign a Punch or Die for the DXF file by touching the Settings button on the right which is the same as the Part Settings dialog that appears while editing a profile.
+The bend lines in this DXF file are identified and displayed with small dots. By default, will consider all of these to be 90-degree, UP bends.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is possible to set a material, change the thickness or assign a Punch or Die for the DXF file by touching the Settings button on the right which is the same as the Part Settings dialog that appears while editing a profile.
+The bend lines in this DXF file are identified and displayed with small dots. By default, will consider all of these to be 90-degree, UP bends.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To edit bend information attached to a bend line, just touch the dot on that bend line. The below panel appears:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/foldflat1.png" alt="foldflat1"></span></p>
+</div>
+<div class="paragraph">
+<p>You can set the bend angle, bend direction, type of bend (air-bend, coining, hemming etc) in this panel. In case of Large-Radius bends enter the Radius and Bump Count using the options provided.
+As the bend information is being edited for these bends, the dots on the bend lines will change to yellow (to indicate that the bend information has been edited). This way, one can quickly see which bends lines have been reviewed and modified.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fold">Fold</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Touching the Fold button will fold the DXF using the angles specified and displays a 3-dimensional view. This view can be rotated by touching on the blank area around the model and then dragging the view. Navigation buttons are present to the left side of the window. Use the arrow keys left, right, up and down to move the model along the respective direction. Touch the Plus mark to zoom-in and use the Minus mark to zoom-out the model. To fit the model to the window, touch the rectangle mark, present in between the Plus and Minus icons.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/fold.png" alt="fold"></span></p>
+</div>
+<div class="paragraph">
+<p>If this looks fine, then press the Do Tooling button to compute a bending sequence and tool assignments for this model. The model is then saved in the Models folder. Review the sequence, gauge positions, and tooling on this model, or run the program for this model on the press-brake.
+If the model does not look quite correct, you can tap the Cancel button to go back to the previous page, where you can adjust the folding angles and try again.
+Before folding up the flat pattern, make sure the required parameters are entered in the Settings dialog and the thickness and material used are verified. If you plan to use special tools, select and lock them in the same dialog. In fact, those parameters influence the dimensions of the resulting folded 3D model. After this initial folding, the 3D model always maintains its dimensions even if the tooling is changed using the <strong>Edit</strong> &#8594; <strong>Sequence</strong> &#8594; <strong>Recompute</strong>.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_fold">Fold</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="edit.html">Edit</a></span>
+  <span class="next"><a href="../import/index.html">Import 3D model</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,154 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_angle_correction">Angle Correction</a>
+<ul class="sectlevel2">
+<li><a href="#_center_angle">Center angle:</a></li>
+<li><a href="#_end_angles">End angles:</a></li>
+<li><a href="#_three_angles">Three angles:</a></li>
+<li><a href="#_direct_corrections">Direct corrections:</a></li>
+<li><a href="#_force_adjust">Force adjust:</a></li>
+<li><a href="#_depth_collision_authorized">Depth collision authorized:</a></li>
+</ul>
+</li>
+<li><a href="#_gauge_correction">Gauge Correction</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The sheet metals used in the workshops hardly ever has their nominal thickness. The real thickness commonly varies ±10% from the nominal value. Also, the variation is not constant across the whole length of the sheet. The thickness on the left side can be different from the thickness on the right side (sheets with a trapezoidal section). Also, after having made a bend, if the angle intended is not obtained you need to make some tweaks to ensure that the angle originally intended is achieved. To correct such types of errors from affecting the final product you provide the machine with corrections which are provided in this page. There are four types of corrections defined which as detailed below.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_angle_correction">Angle Correction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After having made a bend, the operator measures the angle obtained. The measured angular value is entered in the <strong>Angle</strong> field. Suppose, you want an interior angle of 135°, you make a bend and obtain a wide angle which measures 138°. Now, you just enter 138° in this field. Variants of this method allow you to enter two or three measures. automatically calculates the correction to obtain the angle originally programmed. If after making the corrected bend, the angle is still not correct, simply enter the new measured angle value(s). Corrections obtained with this method sum up. Typically, the situation converges very quickly, say after one or two iterations.</p>
+</div>
+<div class="sect2">
+<h3 id="_center_angle">Center angle:</h3>
+<div class="paragraph">
+<p>When selected, this option provides a Center input box for entering the Measured interior angle. You simply measure the resulting angle and enter the exact value in this field, RightAngle automatically computes a correction in BDC target and applies it to both Y1 and Y2.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/centerangle.png" alt="centerangle"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_end_angles">End angles:</h3>
+<div class="paragraph">
+<p>Selecting this mode, allows    you to enter the Left and Right   angles under the Measured interior angles field. In this case, you measure the resulting angle near each extremity. As a result, ca different correction is computed in BDC target separately for Y1 and Y2, considering the bend position along the bed and its outer width. This is only possible when the bend width is 10% of the bed length. With shorter widths, slight differences in measured left and right angles might result in much larger difference in Y1 and Y2 corrections leading to an excessive ram tilt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_three_angles">Three angles:</h3>
+<div class="paragraph">
+<p>In this mode, you can enter the <strong>Left</strong>, <strong>Center</strong> and <strong>Right</strong> angles under the <strong>Measured interior angles</strong> field. Here, you measure the resulting angle in the middle and near each extremity, thereby computing a different correction in BDC target separately for Y1 and Y2 and a correction in target position for the crowning device. The three corrections are computed in a consistent way, considering the mutual influence of crowning on punch penetration depending on the position of the bend along the bed and its outer width. For instance, a large positive increase in crowning will lead to a surprisingly positive correction to Y1 and Y2. This method is only possible when bend width is at least 10% of bend length. Note that with shorter widths, slight differences in measured left and right angles might result in much larger difference in Y1 and Y2 corrections, leading to an excessive ram tilt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_direct_corrections">Direct corrections:</h3>
+<div class="paragraph">
+<p>When you choose this option, the <strong>Y1 correction</strong>, <strong>Y2 correction</strong> and <strong>Crowning correction</strong> fields are displayed. You simply enter a value in the required field for correction. If the correction concerns the two sides of the beam, the same value for Y1 and Y2 must be entered. You can alter the crowning correction using the same principle.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Direct corrections do not sum up. They simply replace the existing corrections.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_force_adjust">Force adjust:</h3>
+<div class="paragraph">
+<p>The value entered in this field is added to the precomputed bending force (tonnage) needed for the bend. If the resulting total force is greater than the tools limit, a warning is issued.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_depth_collision_authorized">Depth collision authorized:</h3>
+<div class="paragraph">
+<p>In certain bends, it is foreseen that the punch will push the material against the die&#8217;s V bottom or against its inner walls, which is named as <em>Depth Collision.</em> Some tools support this, while others do not. By turning on this field, you force the system to accept the collision. Bases its computation on a theoretical geometry of the tools and the material under pressure that might be slightly different from the reality. Therefore, in the actual case, the collision might be a near miss. Also, the tools might be sufficiently robust for a slight contact but not sufficiently to be qualified as robust enough for all cases. Finally, such a warning also makes it explicit that the bend will not be a so-called air-bend, as probably expected by the operator. Instead, it will be a variant of bottoming bends, which require a slightly different cycle. For these reasons, operator must be warned of a possible problem and has thus the possibility to give her permission, assuming the responsibility of any damage to tools.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gauge_correction">Gauge Correction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this page, you can correct the target position of each back-gauge finger, in order to correct the resulting flange length. Do not use this to select an entirely new gauging point. For each BG finger, you can correct the target along three classical directions: X, R and Z.</p>
+</div>
+<div class="paragraph">
+<p><strong>X:</strong> Positive or negative correction along the X direction. To set the BG fingers at a greater distance from the tools, enter a positive value.</p>
+</div>
+<div class="paragraph">
+<p><strong>Z:</strong> Positive or negative correction along the Z direction. To set the BG fingers further on the right, towards the Y2 cylinder, enter a positive value.</p>
+</div>
+<div class="paragraph">
+<p><strong>R:</strong> Positive or negative correction along the R direction. To further lift the BG fingers, enter a positive value.</p>
+</div>
+<div class="paragraph">
+<p><strong>Retraction:</strong> In certain situations, it is necessary to disengage the back gauge during bending. The retraction value is a relative value usually positive, implying that the gauge moves away from the die. If a negative value is programmed, this allows to execute a negative retraction, that is a displacement towards the die.
+Operator can modify the value automatically computed by the system. Note that the value entered in this field represents the actual distance moved, not a correction to be added to previously computed values, as for X, R and Z corrections above.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+A retraction value of 0 (default value) means "no retraction and no ram stop at pinch point".
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+A retraction value of 0.001 means "no retraction, ram will briefly stop at pinch point".
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+When some value is given for retraction it means that "ram stops at pinch point, retraction is performed, ram resumes descent". Depending on how the machine parameters have been set, ram can also resume descent before the retraction is finished. It could even immediately resume descent as soon as the retraction has just started.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Once the corrections are entered, use the <strong>Apply</strong> button to apply the corrections to the bend. In certain cases, you might want these corrections to be applied globally on all the bends (say for example in a part with 10 bends) rather than applying the correction on each bend. To facilitate such cases, use the <strong>copy</strong> option that provides. First apply the corrections that you have done to the current bend. Then press <strong>copy</strong> to copy the corrections to the other bends. A dialog (see picture below) asking whether to copy the corrections to other bends comes up. Press any option to copy and press cancel to cancel the operation.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/copy.png" alt="copy"></span></p>
+</div>
+<div class="paragraph">
+<p>In the case of angle correction, the adjustments are copied only to same-angle bends (you can see the Y1 correction and Y2 corrections fields getting copied over).</p>
+</div>
+<div class="paragraph">
+<p>Another way to apply correction to all bends is by pressing <strong>general</strong>, which will go to general mode. Correction entered, in general mode, will be applied to all the bends.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/allbend.png" alt="allbend"></span></p>
+</div>
+</div>
+</div>

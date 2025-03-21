@@ -1,0 +1,175 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_menu_options">Menu options</a>
+<ul class="sectlevel2">
+<li><a href="#_forward_backward">Forward / Backward</a></li>
+<li><a href="#_bend_navigator">Bend Navigator</a></li>
+<li><a href="#_skip_bend">Skip Bend</a></li>
+<li><a href="#_pre_bend">Pre-Bend</a></li>
+<li><a href="#_grouping_and_ungrouping_bends">Grouping and Ungrouping Bends</a></li>
+<li><a href="#_step_count">Step Count</a></li>
+<li><a href="#_recompute">Recompute</a></li>
+<li><a href="#_display">Display</a></li>
+<li><a href="#_zooming_and_panning_in_the_3d_view">Zooming and Panning in the 3D View</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a program is opened for editing, more options are available. A 3D view of the model is shown, along with some options available from the tabs on the bottom:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/sequence.png" alt="sequence"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_menu_options">Menu options</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_forward_backward">Forward / Backward</h3>
+<div class="paragraph">
+<p>Using this option, one can set up a sequence by folding up, starting from a flat model. Touch the Forward button, and then touch the bend lines in the flat. As you touch them, the bends are folded up and this becomes the bending sequence. It is also possible to sequence backwards by touching the Backward button. In this case, start with a fully folded model, and indicate the bends in reverse sequence.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bend_navigator">Bend Navigator</h3>
+<div class="paragraph">
+<p>When a 3D model is edited, the Bend Navigator is visible on the top of the screen. This displays the total number of bends in the part, and the bend you are currently working on. For example, this image of the bend navigator shows that there are 4 bends, and we are working on the third bend:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/bendnav.png" alt="bendnav"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Touch any of the numbers in the bend navigator to quickly jump to that bend.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If there are any problems with some of the bends, those bend cells are displayed in a different color. The image below shows a navigator with 6 bends; we are currently working on the second bend, while bends 4 and 5 have some problems that need to be fixed:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/bendnav1.png" alt="bendnav1"></span></p>
+</div>
+<div class="paragraph">
+<p>Touching a bend cell that has a problem displays text indicating what the problem is. In this case, the issue with bend 4 is that no back-gauges are being used to position the workpiece:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/bendnav2.png" alt="bendnav2"></span></p>
+</div>
+<div class="paragraph">
+<p>The bend navigator provides a quick overview of the model that is constantly kept updated while editing the gauges, sequence or tooling. If there are no red cells displayed in the navigator, the model is ready to go.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_skip_bend">Skip Bend</h3>
+<div class="paragraph">
+<p>Pressing this button will toggle the current bend&#8217;s Skip state. Bends that have been skipped have a small dash in a circle drawn near their bend sequence number in the 3D model. Also, a small x is drawn near the bend number in the bend status window on the top. Tapping this bend will also display Bend Skipped. Note that bends that have been skipped can be sequenced just like any other, so that accurate collision checks can be done with the correct folded/unfolded state of the model.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/skipbend.png" alt="skipbend"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pre_bend">Pre-Bend</h3>
+<div class="paragraph">
+<p>Use this command to add a pre-bend. Type in the interior angle of the pre-bend to add it. This adds the pre-bend. Then, it must be sequenced using the <strong>forward</strong> or <strong>backward</strong> sequence commands. Then, switch to the tooling page, and do a <strong>recompute</strong> (if recompute is done from the sequence page, the manually computed sequence is over-ridden).</p>
+</div>
+<div class="paragraph">
+<p>To remove the pre-bend on a bend line, go to the sequence page, select that bend using the bend numbers on the top and click on the <strong>pre-bend</strong> again.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grouping_and_ungrouping_bends">Grouping and Ungrouping Bends</h3>
+<div class="paragraph">
+<p>Use <strong>Ungroup</strong> to ungroup bends, which is available whenever a grouped bend is selected as the current bend.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/groupbend.png" alt="groupbend"></span></p>
+</div>
+<div class="paragraph">
+<p>Clicking this button ungroups the currently selected bend (and the bend-count will change on the top). See picture below which shows the result after an ungroup and subsequent <strong>recompute</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/groupbend1.png" alt="groupbend1"></span></p>
+</div>
+<div class="paragraph">
+<p>A set of groupable single bends can likewise be grouped together.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use the forward or backward sequence tools to move these bends together in the sequence (they should be consecutive).</p>
+</li>
+<li>
+<p>Click on the group command and tap on the bends to be grouped. They will all be highlighted in blue. Also, the group button is highlighted to indicate that you are now in the group mode</p>
+</li>
+<li>
+<p>After you are done selecting all bends to be grouped, click on the group button again. The bends are grouped together and switches out of the group mode. See picture below which shows the result (after doing a subsequent recompute).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/groupbend2.png" alt="groupbend2"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_count">Step Count</h3>
+<div class="paragraph">
+<p>step bends can now be exploded into individual bends. Pressing this button brings up the dialog shown in the picture below.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/stepcount.png" alt="stepcount"></span></p>
+</div>
+<div class="paragraph">
+<p>Touch the <strong>Update Step count</strong> to modify just the step count or press the <strong>Change Step-bend</strong> button to convert the step bend into a single radius bend. You can then sequence, tool-up or correct the bends individually.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_recompute">Recompute</h3>
+<div class="paragraph">
+<p>Pressing the <strong>Recompute</strong> button causes to compute a bending sequence for the model. This computed sequence will overwrite any sequence set manually, so use this only when you want to completely overwrite the sequence changes made with the standard computed one. This also brings up the <strong>Select Tools</strong> dialog for further modifications. For more information on this dialog see <em>Recompute</em> in the tooling page.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_display">Display</h3>
+<div class="paragraph">
+<p>Pressing the Display button displays a panel that is used to control some display options. You can use the 9 icons on the left to position the camera to any one of 5 orthogonal directions (top, left, right, front, back) along with 4 isometric directions (front-left, front-right, back-left and back-right):</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/display.png" alt="display"></span></p>
+</div>
+<div class="paragraph">
+<p>The four switches on the right can be used to turn on or off various layers of the machine display. These layers will turn on and off automatically as you switch between various operation modes. However, you can use these switches to further control the display.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can also rotate the 3D view of the model by pressing on any blank background area of the model and dragging.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zooming_and_panning_in_the_3d_view">Zooming and Panning in the 3D View</h3>
+<div class="paragraph">
+<p>In the 3D view, it is always possible to zoom in or out, or pan the view in all the four directions. To perform these operations, use the semi-transparent buttons along the left edge of the screen. Use the Zoom All button (the second button in this set) to quickly centre the view and display the entire model.</p>
+</div>
+</div>
+</div>
+</div>

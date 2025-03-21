@@ -1,0 +1,569 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Create / edit a Profile</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/raicon.png" width="45" height="15" /></div>
+        <div><p>Right Angle Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../../index.html">Welcome to Right Angle</a></li>
+    <li><button class="tree blank"></button><a href="../../installation.html">Installing the Software</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../home/index.html">Home / Overview</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../home/gauging.html">Gauging </a></li>
+        <li><button class="tree blank"></button><a href="../../home/tools.html">Tools</a></li>
+        <li><button class="tree blank"></button><a href="../../home/homescreen.html">Home screen</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="../index.html">Create</a>
+      <ul>
+        <li>
+          <button class="tree open"></button>
+          <a href="index.html">From Profile</a>
+          <ul>
+            <li><button class="tree blank"></button><a href="fromprofile.html">Profileselection</a></li>
+            <li><button class="tree blank"></button><a class="active" href="createeditaprofile.html">Create / edit a Profile</a></li>
+            <li><button class="tree blank"></button><a href="extrude.html">Extrude</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../folddxf/index.html">Fold Flat DXF </a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../folddxf/main.html">Main screen</a></li>
+            <li><button class="tree blank"></button><a href="../folddxf/settings.html">create</a></li>
+            <li><button class="tree blank"></button><a href="../folddxf/edit.html">Edit</a></li>
+            <li><button class="tree blank"></button><a href="../folddxf/fold.html">Fold </a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../import/index.html">Import 3D model</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../import/main.html">Main screen</a></li>
+            <li><button class="tree blank"></button><a href="../import/unfold.html">Unfold</a></li>
+            <li><button class="tree blank"></button><a href="../import/dotooling.html">Do Tooling</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../direct/index.html">Direct Programming</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../direct/directprogram.html">Main screen</a></li>
+            <li><button class="tree blank"></button><a href="../direct/addremove.html">Add / Remove</a></li>
+            <li><button class="tree blank"></button><a href="../direct/settings.html">Settings</a></li>
+            <li><button class="tree blank"></button><a href="../direct/run.html">Run</a></li>
+            <li><button class="tree blank"></button><a href="../direct/moveupmovedownorprevbendnextbend.html">Navigate bend</a></li>
+            <li><button class="tree blank"></button><a href="../direct/corrections.html">Corrections</a></li>
+            <li><button class="tree blank"></button><a href="../direct/jog.html">Jog</a></li>
+            <li><button class="tree blank"></button><a href="../direct/tableprogramming.html">Table Programming</a></li>
+          </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../setting.html">Setting page</a></li>
+        <li><button class="tree blank"></button><a href="../createtool.html">Create Tool</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../edit/index.html">Edit</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../edit/sequence.html">Edit Sequence</a></li>
+        <li><button class="tree blank"></button><a href="../../edit/gauges.html">Back gauges</a></li>
+        <li><button class="tree blank"></button><a href="../../edit/tooling.html">Tooling</a></li>
+        <li><button class="tree blank"></button><a href="../../edit/simulation.html">Simulation</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../run/index.html">Run</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../run/mainscreen.html">Main screen</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../run/wf1/index.html">Model based WF</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../run/wf1/setupsheet.html">Setup Sheet</a></li>
+            <li><button class="tree blank"></button><a href="../../run/wf1/runprogram.html">Run Program</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../run/wf2/index.html">Program based WF</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../run/wf2/directprogram.html">Info screen</a></li>
+            <li><button class="tree blank"></button><a href="../../run/wf2/run.html">Run</a></li>
+          </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../run/corrections.html">Corrections</a></li>
+        <li><button class="tree blank"></button><a href="../../run/cycle.html">Edit Cycle</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../settings/index.html">Settings</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../settings/jogaxes.html">Jog Axes</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/manualprogram.html">Manual Program</a></li>
+        <li><button class="tree blank"></button><a href="../../settings/toolinventory.html">Tool Inventory</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../settings/other settings/index.html">Other Settings</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../settings/other settings/machinesettings.html">Machine Settings</a></li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../settings/other settings/generalparameters/index.html">General Parameters</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/machine.html">Machine</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/tools.html">Tools</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/safety.html">Safety</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/canports.html">CAN ports</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/plcoptions.html">PLC Options</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/digitalinputconfig.html">Digital input configuration</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/maintenance.html">Maintenance</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/log.html">Log</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/diagnostics.html">Diagnostics</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/display.html">Display</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/digitalprotractor.html">Digital Protractor</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/generalparameters/barcode.html">Barcode</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../settings/other settings/yaxisparameters/index.html">Y-Axis Parameters</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/general.html">General</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/mute.html">Mute</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/feedback.html">Feedback</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/pressurevalve.html">Pressure Valve</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/pressuresensor.html">Pressure Sensor</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/idle.html">Idle</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/fastclosing.html">Fast Closing</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/fastclosingadv.html">Fast Closing Advanced</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/pressing.html">Pressing</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/pressureadvancedpos.html">Pressure Advanced</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/decompression.html">Decompression</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/opening.html">Opening</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/yaxiscold.html">Y-Axis Cold Condition Parameters</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/crowning.html">Crowning</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/yaxisparameters/electricpressbrake.html">Electric Press Brake</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../settings/other settings/axisparameters/index.html">Axis Parameters</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../settings/other settings/axisparameters/xaxis.html">X Axis</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/axisparameters/handwheel.html">Hand Wheel</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/axisparameters/fl1.html">FL1</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../settings/other settings/defaults/index.html">Defaults</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../settings/other settings/defaults/bendcycle.html">Bend Cycle</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/defaults/bendprogram.html">Bend program</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/defaults/importexport.html">Import/Export</a></li>
+                <li><button class="tree blank"></button><a href="../../settings/other settings/defaults/others.html">Others</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../application/index.html">Application notes</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../application/toolselection.html">Selection of tools</a></li>
+        <li><button class="tree blank"></button><a href="../../application/airbending.html">Air bendig</a></li>
+        <li><button class="tree blank"></button><a href="../../application/radiusbending.html">Large radius bendig</a></li>
+        <li><button class="tree blank"></button><a href="../../application/hemming.html">Hemming</a></li>
+        <li><button class="tree blank"></button><a href="../../application/coining.html">Coining</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="../index.html">Create</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="index.html">From Profile</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="createeditaprofile.html">Create / edit a Profile</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Create / edit a Profile</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Select a profile in the profile library and choose Edit to modify the profile. The profile opens in the profile editor with the important dimensions displayed, as follows:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/profiledit.png" alt="profiledit"></span></p>
+</div>
+<div class="paragraph">
+<p>All segment lengths are dimensioned; angles which are not 90 degrees are also dimensioned. If a corner uses a large radius (to be done as a step bend), the inner radius is also displayed as a dimension. For example, see the R80 dimension at the top right of the profile above.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_typing_in_new_dimensions">Typing in new dimensions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tap any of the displayed dimensions and type in a new value directly. Then, press Enter to reshape the profile. If length value is entered out of range, an appropriate warning message appears. Here is the same profile as above, keying in some new dimensions. Similarly, if the angle entered is not within the range, a warning message is displayed.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editdimen.png" alt="editdimen"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_length_dimensions">Editing length dimensions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you tap on a length dimension to edit it, you will notice that a dimension line indicating the exact location the dimension is referred to, is displayed. The dimension arrows also serve another purpose; by tapping on one of the displayed dimension arrows, you can change the dimension from an outer dimension to an inner dimension or vice versa. For example, here is a profile showing a 100 mm outer dimension:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editlength.png" alt="editlength"></span></p>
+</div>
+<div class="paragraph">
+<p>Upon tapping near the arrow on the right, the dimension leader line is redrawn and the dimension within the input box is updated as well:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editlength1.png" alt="editlength1"></span></p>
+</div>
+<div class="paragraph">
+<p>If the corner is an acute angled corner, there are three different dimensioning methods, which you can cycle through by tapping on the arrow. The picture below shows all three dimensioning styles in action.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editlength2.png" alt="editlength2"></span></p>
+</div>
+<div class="paragraph">
+<p>For the second and third style, the dimension reference point is a theoretical sharp point, which does not actually appear on the profile. To assist you in visualizing this point, construction lines are drawn in yellow as seen in the pictures above. Upon cycling through these styles by tapping on the dimension arrow, the actual measurement value also updates.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+In the profile above, suppose the required distance to the outer corner point is 100 mm. This can be set up by tapping on the arrow until the dimensioning style shows the outer corner point. Now, the value in the input box reads 105.86. Overwrite this by typing in 100; this now sets the outer corner dimension to 100 mm. Now switching to the tangent point dimension, it correspondingly reads 94.14 mm.
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_large_bend_radius">large bend radius</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For large-radius bends, you can set the dimension to the outer tangent point, or to the start of the bent section:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editlength3.png" alt="editlength3"></span></p>
+</div>
+<div class="paragraph">
+<p>Summary:</p>
+</div>
+<div class="paragraph">
+<p>While working with linear dimensions, it is possible to choose between various dimension basis points (on the inner surface, outer surface, the bending section tangent etc). You switch between these by tapping on the dimension line arrow.
+Note that just tapping on the arrow does not change the shape of the profile; it just re-dimensions them using a different basis. An appropriate length value can later be typed in to change the profile’s shape.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_a_90_degree_corner">Editing a 90-degree corner</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For 90-degree corners, the angle measurement is not displayed. However, just tapping on the corner displays an edit box with the text 90. Type in a different measurement to change the corner angle. The picture below shows this text box being displayed:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/edit90.png" alt="edit90"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_the_base_segment_length">Editing the base segment length</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each profile being edited has a base segment; this is the horizontal segment near the center of the profile. The base segment of a profile is special; it acts like the anchor for the profile and you cannot change it to any angle other than horizontal. You can change the base segment’s length by touching one of its endpoints and dragging left or right; the figure below shows the locations where it is possible to touch and drag to change the base segment length for a profile:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editbaselength.png" alt="editbaselength"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_the_length_of_any_other_segment">Editing the length of any other segment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The length of any other segment can be edited by clicking on the free end of that segment and dragging the same. The free end of any segment is the end that is further away from the base.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editlenseg.png" alt="editlenseg"></span></p>
+</div>
+<div class="paragraph">
+<p>As the segment is dragged, the length dimension of the segment gets updated continuously, so an immediate feedback on the actual length setting at the segment is achieved.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_changing_a_corner_angle">Changing a corner angle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To edit a corner angle, click on the free end of a segment and drag it sideways; this changes the angle at the start of the segment. The example below helps us understand how this works. As the segment is dragged to change the angle, the interior angle snaps to some common angles (like 45, 60, 90 and so on). In case of a non-standard angle, drag to set an approximate angle, and then tap on the angle display and type in the exact value.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editcorner.png" alt="editcorner"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The end of the segment closer to the base segment is fixed; the other end moves when you drag it.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+You can change both the length and angle of a segment at the same time; dragging sideways changes the angle, while dragging along the segment changes the length.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_hemming_fold">Creating a hemming fold</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <strong>hem</strong> can be created by dragging a segment sideways until it folds back on the adjacent segment. If the interior angle closes below 30 degrees, the segment snaps to become a hem:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/hem.png" alt="hem"></span></p>
+</div>
+<div class="paragraph">
+<p>Below is the hem created.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/hem1.png" alt="hem1"></span></p>
+</div>
+<div class="paragraph">
+<p>A hem can be created on the other side by dragging your finger slightly to the outside of the flange before releasing it:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/hem2.png" alt="hem2"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_new_segments_to_a_profile">Adding new segments to a profile</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A new flange can be added to the profile at either of the free ends of the profile. To do this, click a small distance away from either of the free ends. If clicked too close to the free end, the segment also will be dragged along resulting in changing its length or angle. Touch about a centimetre or two away from the free end and start dragging to add a new segment to the profile:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/addseg.png" alt="addseg"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deleting_a_segment">Deleting a segment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A segment can be deleted in one of two ways:
+Tap on the segment length. It becomes editable. Type in 0 and press Enter; the segment gets deleted.
+Click on the free end of the segment and drag it toward the other end, shortening the segment. If it is dragged close enough, the segment disappears when you lift your finger (Without lifting, you can continue dragging and the segment will re-appear once you move a bit further away from the fixed end).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/deleteseg.png" alt="deleteseg"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The base segment of a profile cannot be deleted.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_converting_a_corner_to_a_large_radius_bend">Converting a corner to a large-radius bend</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A normal corner can be converted into a large radius bend (i.e., step bend). To do this, click a small distance away from the outer side of the corner, and drag inwards (If clicked too close to the corner, the segment also will be dragged along resulting in changing its length or angle).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/radiusbend.png" alt="radiusbend"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/radiusbend2.png" alt="radiusbend2"></span></p>
+</div>
+<div class="paragraph">
+<p>To fine-tune the radius, tap on the radius measurement which brings up the Edit Step Bend dialog as shown below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/radiusbend3.png" alt="radiusbend3"></span></p>
+</div>
+<div class="paragraph">
+<p>Use this dialog to tune the Inner Radius, Angle, Step Count and Chordal Deviation (D) values.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_converting_a_large_radius_bend_back_to_a_corner">Converting a large-radius bend back to a corner</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A large radius bend can be converted back to a simple-bend corner by performing the reverse process. Touch near the radius marker, and drag outwards:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editbend.png" alt="editbend"></span></p>
+</div>
+<div class="paragraph">
+<p>Settings:</p>
+</div>
+<div class="paragraph">
+<p>Use this command to modify the settings like Material, Thickness, Punch, Die, Punch holder, Die holder etc. See the Part Settings section for more details.</p>
+</div>
+<div class="paragraph">
+<p>Extrude:</p>
+</div>
+<div class="paragraph">
+<p>Touch this button and enter the Extrusion value in the Part Settings dialog that comes up to create the extrusion.
+Once the profile creation or editing is completed, press the Done button. If changes have been made to an existing profile or a new profile has been created a prompt like the one below is displayed:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editbend1.png" alt="editbend1"></span></p>
+</div>
+<div class="paragraph">
+<p>You can either to choose to save changes by pressing <span class="icon">[check&#93;</span> or discard all the changes made by pressing <span class="icon">[close&#93;</span>.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_typing_in_new_dimensions">Typing in new dimensions</a>
+    </li>
+    <li level="1">
+      <a href="#_editing_length_dimensions">Editing length dimensions</a>
+    </li>
+    <li level="1">
+      <a href="#_large_bend_radius">large bend radius</a>
+    </li>
+    <li level="1">
+      <a href="#_editing_a_90_degree_corner">Editing a 90-degree corner</a>
+    </li>
+    <li level="1">
+      <a href="#_editing_the_base_segment_length">Editing the base segment length</a>
+    </li>
+    <li level="1">
+      <a href="#_editing_the_length_of_any_other_segment">Editing the length of any other segment</a>
+    </li>
+    <li level="1">
+      <a href="#_changing_a_corner_angle">Changing a corner angle</a>
+    </li>
+    <li level="1">
+      <a href="#_creating_a_hemming_fold">Creating a hemming fold</a>
+    </li>
+    <li level="1">
+      <a href="#_adding_new_segments_to_a_profile">Adding new segments to a profile</a>
+    </li>
+    <li level="1">
+      <a href="#_deleting_a_segment">Deleting a segment</a>
+    </li>
+    <li level="1">
+      <a href="#_converting_a_corner_to_a_large_radius_bend">Converting a corner to a large-radius bend</a>
+    </li>
+    <li level="1">
+      <a href="#_converting_a_large_radius_bend_back_to_a_corner">Converting a large-radius bend back to a corner</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="fromprofile.html">Profileselection</a></span>
+  <span class="next"><a href="extrude.html">Extrude</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

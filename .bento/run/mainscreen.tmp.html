@@ -1,0 +1,89 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_run_a_bend_sequence">Run a bend sequence</a></li>
+<li><a href="#_linked_programs">Linked programs</a></li>
+<li><a href="#_tooling_issues">Tooling issues</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Switching to the Run environment displays programs (like the display in the Edit page).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/run.png" alt="t" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>RightAngle distinguishes the program types:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Model-based program</p>
+</li>
+<li>
+<p>Direct programs</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_run_a_bend_sequence">Run a bend sequence</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pressing the <strong>Run</strong> button, Right angle control has two different workflows according to the program type which include the following steps</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Setup page</p>
+</li>
+<li>
+<p>Run page</p>
+</li>
+<li>
+<p>Corrections</p>
+</li>
+<li>
+<p>Modify bend cycle</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_linked_programs">Linked programs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The bend programs are linked so that linked program can be run after running the program. Cyclic link is possible when two programs are linked to each other. Bend program containing multiple setup sheet is linked by default.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/linkprogram.png" alt="linkprogram"></span></p>
+</div>
+<div class="paragraph">
+<p>To run linked program automatically in auto mode and without machine going to stop, after completing the current bend program, Connect program for same tool height should be turned ON in Machine Settings &#8594; General Parameters &#8594; Tools &#8594; Safety. Setup sheet is show if linked program has different tool height and machine will go to stop. To avoid this when Robot is connected, Connect all program in robot mode should be turned ON in Machine Settings &#8594; General Parameters &#8594; Tools &#8594; Safety.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tooling_issues">Tooling issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If the tool(s) used in the program no longer exist in the tool inventory, a warning message is displayed as shown below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/toolmissing.png" alt="toolmissing"></span></p>
+</div>
+<div class="paragraph">
+<p>The program cannot be run until you navigate to the edit mode and change the tool.</p>
+</div>
+<div class="paragraph">
+<p>If the program contains multiple setups, a message like the one below appears when you try to run the program. Once you select which setup you are running, only the tools related to that setup are displayed in the setup sheet, and only those bends are programmed into the machine for running.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/select.png" alt="t" width="300"></span></p>
+</div>
+</div>
+</div>

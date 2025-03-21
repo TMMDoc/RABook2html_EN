@@ -1,0 +1,11 @@
+ Main screen
+:imagesdir: img
+
+
+
+image:directprog.png[]
+
+When this program is run, the setup screen displays all the punches and dies used, along with their 'flip' states (so it can be mounted correctly by the operator): 
+
+image:directprog1.png[,500]
+
